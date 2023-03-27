@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print odd number</title>
+</head>
+<body>
+    <h1> </h1>
+</body>
+</html>
+<script>
+let h1= document.querySelector("h1");
+let text= "";
+function prr() {
+    for(let i=21;i<=50;i=i+2){
+    if(i%2==1){
+       text+=i+" "; 
+    }
+}
+h1.innerText=text;
+}
+prr()
+
+</script>

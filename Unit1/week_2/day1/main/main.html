@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print even number</title>
+</head>
+<body>
+    <h1 id="even"> </h1>
+<h1 id="odd"></h1>
+<h1 id="arr"></h1>
+<h1 class="Prime"></h1>
+</body>
+</html>
+<script>
+let h1= document.querySelector("#even");
+let text= "";
+function prr() {
+    for(let i=2;i<=50;i++){
+    if(i%2==0){
+       text+=i+" "; 
+    }
+}
+h1.innerText="All even numbers are"+"== "+text;
+}
+prr()
+// <!-- for the odd number ass number-2  -->
+let odd= document.querySelector("#odd");
+let oddtext= "";
+for(let i=21;i<=50;i=i+2){
+    if(i%2==1){
+       oddtext+=i+" "; 
+    }
+}
+odd.innerText= "odd numbers are== "+oddtext
+
+// <!-- Array el print number-3  -->
+let arr=  [12, 45, 67, 89, 90, 34, 35, 55];
+let arrtext="";
+let Arr= document.querySelector("#arr");
+for(let i=0; i<arr.length; i++){
+    if(arr[i]%5==0){
+arrtext+=arr[i]+" ";
+    }
+}
+Arr.innerText="Divisible by 5 number are=="+arrtext;
+
+// <!-- Prime number print number-4 -->
+
+let Prime= document.querySelector(".Prime");
+
+const check=(num)=>{
+    if(num<=1){
+        return false;
+    }
+    for(let i=2; i<=num**0.5;i++){
+        if(num%i==0){
+            return false;
+        }
+    }return true;}
+      
+
+let PrimeNum="";
+for(let j=1;j<=50;j++){
+if(check(j)){
+    PrimeNum+=j+" ";
+}
+}
+Prime.innerText="Prime Numbers are== "+PrimeNum;
+
+</script>

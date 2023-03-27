@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Array</title>
+</head>
+<body>
+  <h2></h2>  
+</body>
+</html>
+<script>
+let arr=  [12, 45, 67, 89, 90, 34, 35, 55];
+
+let h2=document.querySelector("h2");
+let text="";
+for(let i=0; i<arr.length; i++){
+    if(arr[i]%5==0){
+text+=arr[i]+" ";
+    }
+}
+h2.innerText=text;
+// done
+</script>
