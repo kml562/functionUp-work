@@ -1,0 +1,33 @@
+
+.container{
+    margin: auto;
+    margin-top: 5%;
+    padding: 50px 80px;
+    border: 10px solid #686fd7;
+    width:max-content;
+    display: grid;
+    justify-items: center;
+   
+}
+h3{
+    color: #a2a3a2;
+}
+#joke{
+    font-weight: bolder;
+    font-size: large;
+    text-align: center;
+}
+button{
+    background-color: #a26ad8;
+    border: 0px;
+    padding: 5px;
+    /* font-weight: bold; */
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 6px;
+margin-top: 40px;
+    margin-bottom: -20px;
+
+
+}

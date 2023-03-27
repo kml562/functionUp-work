@@ -1,0 +1,2 @@
+in this day we know about HTML so html is a hyper text markup language; it have 2 parts head and body ,
+head part is invisible, body part is invisible for the user thats mean user can't see anything in the head part. and body part is visible fort  the user, user can see the body part in the web page,
