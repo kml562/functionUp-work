@@ -17,7 +17,7 @@
 let h1= document.querySelector("#even");
 let text= "";
 function prr() {
-    for(let i=2;i<=50;i++){
+    for(let i=1;i<=50;i++){
     if(i%2==0){
        text+=i+" "; 
     }
@@ -28,7 +28,7 @@ prr()
 // <!-- for the odd number ass number-2  -->
 let odd= document.querySelector("#odd");
 let oddtext= "";
-for(let i=21;i<=50;i=i+2){
+for(let i=20;i<=50;i++){
     if(i%2==1){
        oddtext+=i+" "; 
     }
@@ -55,12 +55,13 @@ const check=(num)=>{
         return false;
     }
     for(let i=2; i<=num**0.5;i++){
+        // 4 2 8 2/4
         if(num%i==0){
             return false;
         }
     }return true;}
       
-
+    // O(nlog(n))
 let PrimeNum="";
 for(let j=1;j<=50;j++){
 if(check(j)){
@@ -68,5 +69,17 @@ if(check(j)){
 }
 }
 Prime.innerText="Prime Numbers are== "+PrimeNum;
+// for (let i =2;i<=50;i++){
+//     let pnum=true;
+// for(let j=2;j<i;j++){
+//     if(i%j==0){
+// pnum=false;
+// break;
+//     }
+// }
+// if(pnum){
+//     console.log(i)
+// }
+// }
 
 </script>
