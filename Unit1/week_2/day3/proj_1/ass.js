@@ -1,3 +1,7 @@
+// if the number is even and less than 15, print a
+// if the number is even and more than 15, print b
+// if the number is odd and less than 10, print c
+// if the number is odd and more than 10, print d
 
 // answe number 1 -- with nested cond
 const checknum = (number) => {
@@ -7,6 +11,7 @@ const checknum = (number) => {
     number < 10 ? console.log("c") : console.log("d");
   }
 };
+
 
 // using logical operators
 const logical = (number) => {
@@ -35,6 +40,7 @@ let golbal ="global scope when we declare a variable globally its called goobal 
 {
     let local = "when we declare a variable in locally its called local scope and you can access in local scope but not in global scope" 
 }
+
 //// ------------------------------------------------------------------------------------------------////////////////
 //// problem 4
 // ------------------------------------------------------------------------------------------------//////////////
@@ -59,8 +65,9 @@ for(let i=a;i<=b;i++){
     multi*=i;
 
 }
-return sum,multi;
+ console.log(sum,multi);
 };
+sumAndMulti(10,20)
 
 
 //// ------------------------------------------------------------------------------------------------////////////////
@@ -69,7 +76,7 @@ return sum,multi;
 
 
 const leapyear=(year)=>{
-return (year%4==0?true:false)
+return (year%4==0&&year!==1900 && year!==1800&&year!==2100 && year!==2200&& year!==2300?true:false)
 }
 
 //// ------------------------------------------------------------------------------------------------/////////////
@@ -78,7 +85,7 @@ return (year%4==0?true:false)
 
 let area=(a,b,c)=>{
 let s= (a+b+c)/2;
-return ((s*(s-a)*(s-b)+(s*c)**.5))
+return ((s * (s-a) * (s-b)*(s-c))**.5)
 }
 
 // find the area of a triangle.  Lengths of its sides are 5, 6, 7
@@ -103,7 +110,9 @@ if(first+second===50 || first===50 || second===50){
 }else return false;
 }
 
-
+let x=32;
+let y=20;
+console.log(problem8(x,y))
 
 
 //// ------------------------------------------------------------------------------------------------/////////////
@@ -120,7 +129,7 @@ else return false;
 }
 
 let function22=(num)=>{
-    if((num>100 && num<200)&& (num>200 && num<400 ) ){
+    if((num>100 && num<200)||(num>200 && num<400 ) ){
      return true;
     }else return false;
 }

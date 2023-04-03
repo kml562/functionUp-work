@@ -3,8 +3,8 @@
 
 const places = ['delhi', 'gurgaon', 'jaipur', 'pune']
 const morePlaces = ['kochi', 'hyderabad', 'Shimla', 'Srinagar']
-//places.shift();
-console.log(places)
+// places.shift();
+// console.log(places)
 // ============================================================================= //
 //2.
 // insert that element at the start of the morePlaces array and print the new array
