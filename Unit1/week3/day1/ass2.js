@@ -54,7 +54,14 @@ const facebookProfiles = [
       state: "haryana",
     },
     emails: ["abc@gmail.com", "efg@yahoo.com", "ghj@outlook.com"],
-  },
+  },{
+    firstName: "ritik",
+    likes: ["food", "mobile"],
+    hasDrivingLicense: true,
+    address: {
+      location: "gurgaon",
+      state: "haryana",
+  }}
 ];
 
 // IMPORTANT: SOLVE the following questions using two methods
@@ -62,6 +69,59 @@ const facebookProfiles = [
 // 2. USE HIGHER ORDER FUNCTIONS TO SOLVE THE ABOVE QUESTIONS(map, filter, find, forEach etc. )
 
 // ==================================== 0 ==================================== //
+
+function forrev(name,property){
+
+for(let i=0;i<facebookProfiles.length;i++){
+if(facebookProfiles[i].firstName===name){
+  if(facebookProfiles[i][property]!==undefined){
+let val=facebookProfiles[i][property]
+return val;
+  }else{
+return "value donse not exist";
+  }
+
+}
+
+}
+return "use dose not found"
+
+};
+
+// console.log(forrev("ritik","likes"))
+// 
+function useHOF(name,property){
+let val=facebookProfiles.find(el=>(name==el.firstName));
+ if(val){
+return  val[property]?val[property]:"value not found";
+ }else{
+  return "user not found";
+ }
+
+
+}
+
+console.log(useHOF("ritiks","likess"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function profileLookup(name, property) {
   for (let i = 0; i < facebookProfiles.length; i++) {
@@ -75,7 +135,7 @@ function profileLookup(name, property) {
   }
   return "person does not exist";
 }
-// console.log(profileLookup("Pritesh", "number"));
+//  console.log(profileLookup("Pritesh", "number"));
 
 //   return
 
@@ -99,7 +159,7 @@ function profileLookups(name, property) {
   return value;
 }
 
-profileLookups("Pritesh", "number");
+// console.log(profileLookups("Priteksh", "number"));
 
 // ==================================2 ====================================== //
 function getNamesFromGurgaon(facebookProfiles) {
@@ -113,7 +173,7 @@ function getNamesFromGurgaon(facebookProfiles) {
     });
   return ans;
 }
-
+// console.log( getNamesFromGurgaon(facebookProfiles))
 const getNamesFromGurgaonforloop = (arr) => {
   let Arr = [];
   for (let i = 0; i < arr.length; i++) {
@@ -127,7 +187,7 @@ const getNamesFromGurgaonforloop = (arr) => {
   }
   return Arr;
 };
-// console.log(getNamesFromGurgaonforloop(facebookProfiles))
+//  console.log(getNamesFromGurgaonforloop(facebookProfiles))
 //complete the above functin such that it returns the list of full names of all people of gurgaon.
 // ex = ['Jay ', 'Pritesh Kumar']
 
@@ -161,7 +221,7 @@ function findFullNameHOF(stateName) {
   return `${residents[0].firstName} ${residents[0].lastName}`;
 }
 
-console.log(findFullNameHOF("up"));
+//console.log(findFullNameHOF("up"));
 // ================================== 3 ====================================== //
 
 function getDLStatus(facebookProfiles) {
@@ -182,12 +242,12 @@ function getGurgaonResidentsWithLicenseStatus() {
     (profile) => profile.address.location === "gurgaon"
   );
   return gurgaonResidents.map((profile) => {
-    const fullName = `${profile.firstName} ${profile.lastName}`;
+    const fullName = `${profile.firstName}`;
     const licenseStatus = profile.hasDrivingLicense ? "D/L" : "N D/L";
     return `${fullName} - ${licenseStatus}`;
   });
 }
-
+console.log(getGurgaonResidentsWithLicenseStatus())
 //3. write a function which returns full names of all people of gurgaon with their driving license status, in an array.
 // like shown in the example below
 // ex = ['Jay - D/L', 'Pritesh Kumar - N D/L']
@@ -199,7 +259,7 @@ function getFullName(facebookProfiles) {
   );
 }
 
-const fullNames = getFullName(facebookProfiles);
+// const fullNames = getFullName(facebookProfiles);
 // console.log(fullNames);
 
 function getFullNameLoop(facebookProfiles) {
@@ -231,7 +291,7 @@ ansarr= ansarr.concat(currarr);
   }
   return ansarr;
 }
-
+// console.log(getLikes(facebookProfiles))
 
 function getAllLikesHof(profiles) {
   let likes = [];
@@ -242,7 +302,7 @@ function getAllLikesHof(profiles) {
   return likes;
 }
 
-const allLikes = getAllLikesHof(facebookProfiles);
+// const allLikes = getAllLikesHof(facebookProfiles);
 // console.log(allLikes);
 
 // 5. write a function which returns all likes of all the people in an array
@@ -268,7 +328,7 @@ if(ans){
 
 }
 
-
+//  console.log( getNameFromDelhiWithDL(facebookProfiles))
 
 function getNameFromDelhiWithDLloop(arr){
  
@@ -285,7 +345,7 @@ function getNameFromDelhiWithDLloop(arr){
   }
 }}
 
-console.log(getNameFromDelhiWithDLloop(facebookProfiles))
+//  console.log(getNameFromDelhiWithDLloop(facebookProfiles))
 //6. write a function which return  the name of the any one person who live in delhi and has driving license
 //ans => "no such person"
 
@@ -306,7 +366,7 @@ return facebookProfiles[i].lastName? facebookProfiles[i].firstName+" "+facebookP
  return "not found";
 }
 let getName=getNameOfDriverWithoutDL(facebookProfiles);
-console.log(getName);
+// console.log(getName);
 
 function findDrivingLikesWithoutLicensehof(facebookProfiles) {
   const person = facebookProfiles.find((el) => {

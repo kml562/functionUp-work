@@ -89,13 +89,15 @@ let mapping=array.map((el, index) => index%2===0?el*10:el*2);
 
  const carBrands = ["honda", "toyota", "maruti","tata"]
  const carModel = ["city", "innova", "alto", "nano"]
- 
+//  let arr=[];
+//  arr.push(carBrands)
+//  arr.push(carModel)
 
-const carObject = carBrands.reduce((obj, brand, index) => {
-    obj[brand] = carModel[index];
-    return obj;
-  }, {});
- //console.log(carObject);
+// const carObject = carBrands.reduce((obj, brand, index) => {
+//     obj[brand] = carModel[index];
+//     return obj;
+//   }, {});
+//  //console.log(carObject);
  
  
 // ======================================================== //
@@ -108,7 +110,10 @@ const carObject = carBrands.reduce((obj, brand, index) => {
  
  const arrays = [[1, 2, 3], [4, 5], [6]];
  result =  [1, 2, 3, 4, 5, 6]
-
+ let answ=[2,4]
+for(let i=0;i<arrays.length;i++){
+assw= [...amsw,...arrays[i]]
+}
 const flatten = arrays.reduce((acc, curr) => [...acc, ...curr], []);
 
 //console.log(flatten);
