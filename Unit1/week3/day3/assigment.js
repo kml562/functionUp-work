@@ -82,9 +82,18 @@ function countSuits(cardData) {
 
 // ================================================= 4 ============================================== //
 
-function getSuitValues(cardData) {
-  // write your code here
-}
+function getSuitsWithValues(cardData) {
+    return cardData.reduce((acc, curr) => {
+      const { suit, value } = curr;
+      if (acc[suit]) {
+        acc[suit].push(value);
+      } else {
+        acc[suit] = [value];
+      }
+      return acc;
+    }, {});
+  }
+  
 
 /**
  *  4. write a function which returns an object with the suits as its key and its available values as value
