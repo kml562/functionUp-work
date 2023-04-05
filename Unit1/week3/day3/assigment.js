@@ -74,7 +74,7 @@ function countSuits(cardData) {
     } , {})
       }
     
-    console.log(countSuits(cardData))
+    // console.log(countSuits(cardData))
       /**
  * 3. write a function which returns an object with the suits as its key and its total count as its value
  * ans => {  heart:1,  club:3, diamond:2,}
@@ -83,17 +83,16 @@ function countSuits(cardData) {
 // ================================================= 4 ============================================== //
 
 function getSuitsWithValues(cardData) {
-    return cardData.reduce((acc, curr) => {
-      const { suit, value } = curr;
-      if (acc[suit]) {
-        acc[suit].push(value);
-      } else {
-        acc[suit] = [value];
-      }
-      return acc;
-    }, {});
+    return cardData.reduce((acc, {suit, value}) => {
+if(acc[suit]==undefined){
+    acc[suit] =[ value];
+}else{
+    acc[suit].push(value); 
+}
+return acc;
+}, {}) 
   }
-  
+  console.log(getSuitsWithValues(cardData));
 
 /**
  *  4. write a function which returns an object with the suits as its key and its available values as value
