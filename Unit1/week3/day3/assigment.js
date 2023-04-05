@@ -84,7 +84,7 @@ function countSuits(cardData) {
 
 function getSuitsWithValues(cardData) {
     return cardData.reduce((acc, {suit, value}) => {
-if(acc[suit]==undefined){
+if(!acc[suit]){
     acc[suit] =[ value];
 }else{
     acc[suit].push(value); 
