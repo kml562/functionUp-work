@@ -46,10 +46,14 @@ return obj?console.log(true):console.log(false);
 
 
 function getSuits(cardData) { 
-let ans= cardData.map(el => el.suit);
-return ans
+    return cardData.reduce((acc, el) => {
+        if (!acc.includes(el.suit)) {
+          acc.push(el.suit);
+        }
+        return acc;
+      }, []);
 }
-// console.log(getSuits(cardData));
+console.log(getSuits(cardData));
 /**
     2. write a function which returns the list of available suits in the above data
  * ans => ["heart", "club", "diamond"]
@@ -70,7 +74,7 @@ function countCardsBySuit(cardData) {
     }, {});
   }
   
-//   console.log(countCardsBySuit(cardData)); 
+  console.log(countCardsBySuit(cardData)); 
   // Output: { heart: 1, club: 3, diamond: 2 }
   
 /**
@@ -86,7 +90,7 @@ function countCardsBySuit(cardData) {
 
   function getSuitValues(cardData) {
     const result = {};
-    for (const card of cardData) {
+    for (let card of cardData) {
       if (result[card.suit]) {
         if (!result[card.suit].includes(card.value)) {
           result[card.suit].push(card.value);
