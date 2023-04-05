@@ -16,8 +16,8 @@ return value;
 // return     element>8
 // }
 let arr1=[3,5,6,4,3];
-let finder= find(arr1,(element) => element>8);
-// console.log(finder)
+let finder= find(arr1,(element) => element>9);
+//  console.log(finder)
 // let arrrr=arr1.map(el=> el*2)
 // console.log("dslfjk",arrrr)
 // ======================================================= //
@@ -30,7 +30,7 @@ if(opration(arr[i])){
     }
     return index;
 }
-let findindex= findof(arr1,(el)=>el===4);
+let findindex= findof(arr1,(el)=>el===99);
 // console.log(findindex)
 
 // =====================================================//
@@ -44,10 +44,10 @@ let findindex= findof(arr1,(el)=>el===4);
 const practiceData = [[14,21,23,64], [33,46,51,65]]
 const resultant=[];
 for(let i=0;i<practiceData.length;i++){
-    const data= practiceData[i].map(val => val+1)
+    const data= practiceData[i].map(val => val+1);
 resultant.push(data)
 }
-//console.log(resultant)
+// console.log(resultant)
 
   
  /* requirement two
@@ -70,7 +70,7 @@ evendata.push(data)
     // and numbers at even index are multiplied by 10;
 
 let mapping=array.map((el, index) => index%2===0?el*10:el*2);
-// console.log(mapping);
+//  console.log(mapping);
 
 
 
@@ -95,11 +95,11 @@ let mapping=array.map((el, index) => index%2===0?el*10:el*2);
 //  arr.push(carBrands)
 //  arr.push(carModel)
 
-// const carObject = carBrands.reduce((obj, brand, index) => {
-//     obj[brand] = carModel[index];
-//     return obj;
-//   }, {});
-//  //console.log(carObject);
+const carObject = carBrands.reduce((obj, brand, index) => {
+    obj[brand] = carModel[index];
+    return obj;
+  }, {});
+ console.log(carObject);
  
  
 // ======================================================== //
@@ -111,11 +111,11 @@ let mapping=array.map((el, index) => index%2===0?el*10:el*2);
  to “flatten” an array of arrays into a single array that has all the elements of the original arrays. */
  
  const arrays = [[1, 2, 3], [4, 5], [6]];
- result =  [1, 2, 3, 4, 5, 6]
- let answ=[2,4]
-for(let i=0;i<arrays.length;i++){
-assw= [...amsw,...arrays[i]]
-}
+//  result =  [1, 2, 3, 4, 5, 6]
+ let ansarr=[]
+// for(let i=0;i<arrays.length;i++){
+// ansarr= [...ansarr,...arrays[i]]
+// }
 const flatten = arrays.reduce((acc, curr) => [...acc, ...curr], []);
 
 //console.log(flatten);
@@ -129,7 +129,7 @@ const flatten = arrays.reduce((acc, curr) => [...acc, ...curr], []);
   // return an array with all words converted into uppercase using higher order function
   //const countries = ['FINLAND', 'DENMARK', 'SWEDEN', 'NORWAY', 'ICELAND']
   let ans= countries.map(el => el.toUpperCase());
-  console.log(ans)
+   console.log(ans)
 
 
 // ======================================================== //

@@ -31,7 +31,7 @@ function findCard(value, suit) {
   const valarr = cardData.find((el) => el.value === value && el.suit === suit);
   return valarr ? true : false;
 }
-// console.log(findCard(55,"diamond"))
+// console.log(findCard(5,"diamond"))
 
 /** * 1. complete the above function,
  * it should return true /false if card is present/absent
@@ -74,7 +74,7 @@ function countSuits(cardData) {
     } , {})
       }
     
-    // console.log(countSuits(cardData))
+// console.log(countSuits(cardData))
       /**
  * 3. write a function which returns an object with the suits as its key and its total count as its value
  * ans => {  heart:1,  club:3, diamond:2,}
@@ -92,7 +92,7 @@ if(!acc[suit]){
 return acc;
 }, {}) 
   }
-  console.log(getSuitsWithValues(cardData));
+   console.log(getSuitsWithValues(cardData));
 
 /**
  *  4. write a function which returns an object with the suits as its key and its available values as value

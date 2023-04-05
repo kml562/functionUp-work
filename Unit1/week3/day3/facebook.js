@@ -71,7 +71,7 @@ function profileLookup(name, property) {
   }
   return "person dose not exist";
 }
-// console.log(profileLookup("Pritesh", "number"))
+// console.log(profileLookup("Priteshkk", "numberss"))
 
 function profileLookupLoop(name, property) {
   //write your code here
@@ -84,7 +84,7 @@ function profileLookupLoop(name, property) {
   }
   return "person not found";
 }
-// console.log(profileLookupLoop("Pritesh", "number"))
+//  console.log(profileLookupLoop("Pritesj", "numbehr"))
 // complete the above function such that when it is called with name and property, then it should return its value
 // ex
 // profileLookup("Pritesh", "number"), then it should return his number
@@ -119,12 +119,12 @@ function getNamesFromGurgaon(facebookProfiles) {
     return acc;
   }, []);
 }
-//console.log(getNamesFromGurgaon(facebookProfiles));
+// console.log(getNamesFromGurgaon(facebookProfiles));
 
 const getNamesFromGurgaonLoop = (facebookProfiles) => {
   let ans = [];
   for (let i = 0; i < facebookProfiles.length; i++) {
-    if (facebookProfiles[i].address.location == "gurgaon") {
+    if (facebookProfiles[i].address.location === "gurgaon") {
       facebookProfiles[i].lastName
         ? ans.unshift(
             facebookProfiles[i].firstName + " " + facebookProfiles[i].lastName
@@ -134,7 +134,7 @@ const getNamesFromGurgaonLoop = (facebookProfiles) => {
   }
   return ans;
 };
-// console.log(getNamesFromGurgaonLoop(facebookProfiles))
+//  console.log(getNamesFromGurgaonLoop(facebookProfiles))
 // ==================================2 ====================================== //
 
 function findFullName(stateName) {
@@ -146,7 +146,7 @@ function findFullName(stateName) {
   } else return "not found state";
 }
 
-// console.log(findFullName("haryana"))
+//  console.log(findFullName("haryana"))
 
 const findFullNameLoop = (stateName) => {
   for (let i = 0; i < facebookProfiles.length; i++) {
@@ -158,7 +158,7 @@ const findFullNameLoop = (stateName) => {
   }
   return "state not found in database";
 };
-// console.log(findFullNameLoop("rajasthan"))
+//  console.log(findFullNameLoop("rajasthan"))
 // 2. complete this function, which takes state name as argument and return the name
 // of one of its residents
 
@@ -184,7 +184,7 @@ function getDLStatus(facebookProfiles) {
       return acc;
     }, []);
 }
-// console.log(getDLStatus(facebookProfiles))
+//  console.log(getDLStatus(facebookProfiles))
 
 const getDLStatusLoop = (facebookProfiles) => {
   let ansarr = [];
@@ -206,7 +206,7 @@ const getDLStatusLoop = (facebookProfiles) => {
   }
   return ansarr
 };
-//  console.log(getDLStatusLoop(facebookProfiles))
+// console.log(getDLStatusLoop(facebookProfiles))
 //3. write a function which returns full names of all people of gurgaon with their driving license status, in an array.
 // like shown in the example below
 // ex = ['Jay - D/L', 'Pritesh Kumar - N D/L']
@@ -220,7 +220,7 @@ el.lastName? arr.push(el.firstName+" "+el.lastName): arr.push(el.firstName);
 });
 return arr;
 }
-// console.log(getFullName(facebookProfiles))
+//  console.log(getFullName(facebookProfiles))
 
 const getFullNameLoop = (facebookProfiles) =>{
     let arr=[];
@@ -229,7 +229,7 @@ const getFullNameLoop = (facebookProfiles) =>{
     }
     return arr;
 }
-// console.log(getFullNameLoop(facebookProfiles))
+//  console.log(getFullNameLoop(facebookProfiles))
 // 4. write a function which returns full names in an array
 //ans = ['Akash Agarwal', 'Pritesh Kumar', 'Sabiha Khan', 'Suyash Kashyap', 'Jay' ]
 
@@ -237,6 +237,7 @@ const getFullNameLoop = (facebookProfiles) =>{
 
 function getLikes(facebookProfiles) {
     const likesSet = new Set();
+    
     facebookProfiles.forEach(el => {
       if (el.likes) {
         el.likes.forEach(like => {
@@ -262,7 +263,7 @@ for(let i of llkearr){
     }
     return [...set];
 }
-console.log(getLikesLoop(facebookProfiles));    
+// console.log(getLikesLoop(facebookProfiles));    
 // 5. write a function which returns all likes of all the people in an array
 //hint: use spread syntax
 //ans = ['music', 'movies', 'code', 'podcasts', 'travel', 'driving', 'food', 'mobile']
@@ -273,7 +274,7 @@ function getNameFromDelhiWithDL(facebookProfiles) {
 let ans= facebookProfiles.find(el => el. address.state ==="delhi");
 return ans? (ans.lastName?ans.firstName+" "+ans.lastName:ans.firstName):"no such person";
 }
-
+// console.log( getNameFromDelhiWithDL(facebookProfiles))
 function getNameFromDelhiWithDLLoop(facebookProfiles){
     for(let el of facebookProfiles){
     if(el.address.state==="delhi"){
@@ -282,7 +283,7 @@ function getNameFromDelhiWithDLLoop(facebookProfiles){
 }
 return "no such person"
 }
-// console.log(getNameFromDelhiWithDL(facebookProfiles))
+//  console.log(getNameFromDelhiWithDL(facebookProfiles))
 //6. write a function which return  the name of the any one person who live in delhi and has driving license
 //ans => "no such person"
 
