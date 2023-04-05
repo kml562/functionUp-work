@@ -73,4 +73,9 @@ function getSuitCount(cardData) {
     return acc;
   }, {});
 }
-console.log(getSuitCount(cardData));
+// console.log(getSuitCount(cardData));
+let arr=[1,3,45]
+let val= arr+"";
+// let newval= JSON.parse(val);
+
+console.log(val,newval)

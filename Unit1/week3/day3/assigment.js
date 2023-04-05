@@ -99,3 +99,4 @@ return acc;
  *  ans => { heart:[7], club:[8,2,10], diamond:[2,5]}
  *
  */
+// arr of obj

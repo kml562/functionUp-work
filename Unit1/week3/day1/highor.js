@@ -12,12 +12,14 @@ if(opration(arr[i])){
 return value;
 
 }
-
+// function opration(element){
+// return     element>8
+// }
 let arr1=[3,5,6,4,3];
 let finder= find(arr1,(element) => element>8);
 // console.log(finder)
-
-
+// let arrrr=arr1.map(el=> el*2)
+// console.log("dslfjk",arrrr)
 // ======================================================= //
 
 const findof=(arr,opration)=>{
