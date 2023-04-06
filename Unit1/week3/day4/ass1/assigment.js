@@ -1,14 +1,13 @@
 const person = {
-    name: "Akash",
-    mobile: 999999999,
-    address: {
-        pincode: 1234,
-        city: "gurgaon",
-        state: "haryana",
-        emails: ["asd@gmail.com", "abc@yahoo.com", "rty@hotmail.com"],
-    },
+  name: "Akash",
+  mobile: 999999999,
+  address: {
+    pincode: 1234,
+    city: "gurgaon",
+    state: "haryana",
+    emails: ["asd@gmail.com", "abc@yahoo.com", "rty@hotmail.com"],
+  },
 };
-
 
 /**
  * 
@@ -36,8 +35,14 @@ const person = {
     Hint: use destructuring at every level, i.e. copy each level shallowly
  */
 
-
-
+let newPerson = {};
+for (let key in person) {
+  newPerson[key] = person[key];
+}
+newPerson.name = "Rahul";
+newPerson.address.pincode = 4567;
+newPerson.address.emails[0] = "asd@outlook.com";
+// console.log(newPerson,person)
 
 /**
  * explain the difference between primitive and non primitive data types when we use the following operator
@@ -46,3 +51,12 @@ const person = {
  *
  *
  */
+// ===================================2222222222========================///==============================
+/**2==
+ * Primitive and non-primitive data types are two categories of data types used in programming languages.
+ *  Primitive data types are simple types that are directly supported by the programming language, 
+ * while non-primitive data types are more complex types that can be defined by the programmer.They differ in 
+ * how they are assigned and compared. Primitive data types are assigned by value and compared by value,
+ *  while non-primitive data types are assigned by reference and compared by reference. Understanding the 
+ * differences between these types is important for efficient and effective programming.
+ * */
