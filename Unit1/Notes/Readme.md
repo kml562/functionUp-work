@@ -14,3 +14,4 @@ Rest operator
 Higher order functions
 Value and Reference
 Closure
+make notes
