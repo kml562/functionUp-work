@@ -1,2 +1,2 @@
 # studious-disco
-dfaz
+local scope and global scope 
