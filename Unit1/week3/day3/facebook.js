@@ -292,7 +292,7 @@ return "no such person"
 function getNameOfDriverWithoutDL(facebookProfiles) {
   //write your code here
   const person = facebookProfiles.find((el) => {
-    return el.likes && el.likes.includes("driving") && !el.hasDrivingLicense;
+    return el.likes.includes("driving") && !el.hasDrivingLicense;
   });
 
   return person ?person.firstName: "No person found";
@@ -300,3 +300,10 @@ function getNameOfDriverWithoutDL(facebookProfiles) {
 console.log(getNameOfDriverWithoutDL(facebookProfiles))
 //7. write a function which return the name of the any one person who like driving but doesnt have driving license
 //asn => pritesh
+function getNameOfDriverWithoutDLLoop(facebookProfiles){
+  for(let el of facebookProfiles){
+    return el.likes && el.likes.includes("driving") && !el.hasDrivingLicense;
+  }
+  return person ?person.firstName: "No person found";
+};
+console.log(getNameOfDriverWithoutDL(facebookProfiles))

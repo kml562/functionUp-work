@@ -1,0 +1,4 @@
+// filter only works for the array data type it will not work in a number data type and affter push the value into the array
+// it will invoking for the a number thats why its not working;p
+// push show the new length of the arr
+// pop return the value

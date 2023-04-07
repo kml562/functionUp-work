@@ -6,8 +6,20 @@ const person = {
     city: "gurgaon",
     state: "haryana",
     emails: ["asd@gmail.com", "abc@yahoo.com", "rty@hotmail.com"],
+  
   },
 };
+
+const newPerson = {
+  ...person,
+  name: "Rahul",
+  address: {
+    ...person.address,
+    pincode: 4567,
+    emails: ["asd@outlook.com", ...person.address.emails.slice(1)],
+  },
+};
+console.log(person);
 
 /**
  * 
@@ -30,33 +42,25 @@ const person = {
         emails:['asd@outlook.com', 'abc@yahoo.com', 'rty@hotmail.com']
     }
 }
-  
+
  *  CAUTION: DO NOT USE JSON.parse(JSON.stringify())
     Hint: use destructuring at every level, i.e. copy each level shallowly
  */
-
-let newPerson = {};
-for (let key in person) {
-  newPerson[key] = person[key];
-}
-newPerson.name = "Rahul";
-newPerson.address.pincode = 4567;
-newPerson.address.emails[0] = "asd@outlook.com";
-// console.log(newPerson,person)
 
 /**
  * explain the difference between primitive and non primitive data types when we use the following operator
  * 1. assignment operator
  * 2. equality operator
+
  *
  *
  */
 // ===================================2222222222========================///==============================
 /**2==
  * Primitive and non-primitive data types are two categories of data types used in programming languages.
- *  Primitive data types are simple types that are directly supported by the programming language, 
- * while non-primitive data types are more complex types that can be defined by the programmer.They differ in 
+ *  Primitive data types are simple types that are directly supported by the programming language,
+ * while non-primitive data types are more complex types that can be defined by the programmer.They differ in
  * how they are assigned and compared. Primitive data types are assigned by value and compared by value,
- *  while non-primitive data types are assigned by reference and compared by reference. Understanding the 
+ *  while non-primitive data types are assigned by reference and compared by reference. Understanding the
  * differences between these types is important for efficient and effective programming.
  * */
