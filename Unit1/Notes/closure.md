@@ -5,12 +5,14 @@ This means that a closure can "remember" the values of these variables even afte
 
 const outerfunction=()=>{
     let outervar= "i'm a outer variable in the function";
+    let x=0;  /destoye
     function inner(){
         let innervar= "i'm a inner variable in the function";
         return outerval+" "+ innervar;
     }
-    inner();
+    return inner();
 }
+
 
 const invokefun= outerfunction();
 <!-- it will return the inner function   -->
