@@ -34,3 +34,13 @@ x.lastName? x.firstName+" "+x.lastName:x.firstName
 )
 
 console.log(final)
+
+// function sum(a,b){
+//      return a+b
+// }
+function sum(a,b){
+    return a+b
+}
+function kml(x,y,sum){
+return sum(x,y)
+}
