@@ -19,7 +19,7 @@ const newPerson = {
     emails: ["asd@outlook.com", ...person.address.emails.slice(1)],
   },
 };
-console.log(person);
+console.log(person,newPerson);
 
 /**
  * 
