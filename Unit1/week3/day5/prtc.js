@@ -7,4 +7,4 @@ function parent(){
 };
 
 let callfun= parent()
-console.log(callfun())
+console.log(callfun)
