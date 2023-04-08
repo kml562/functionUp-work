@@ -1,17 +1,17 @@
 const test= document.querySelector("ul")
-// test.addEventListener(
-//     "mouseenter",
-//     (event) => {
-//       // highlight the mouseenter target
-//       event.target.style.color = "purple";
+test.addEventListener(
+    "mouseenter",
+    (event) => {
+      // highlight the mouseenter target
+      event.target.style.color = "purple";
   
-//       // reset the color after a short delay
-//       setTimeout(() => {
-//         event.target.style.color = "";
-//       }, 500);
-//     },
-//     false
-//   );
+      // reset the color after a short delay
+      setTimeout(() => {
+        event.target.style.color = "";
+      }, 500);
+    },
+    false
+  );
   test.addEventListener("onmouseleave", (event) => {
     event.target.style.color = "blue"
   })
