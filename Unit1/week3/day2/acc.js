@@ -101,11 +101,21 @@ function countCardsBySuit(cardData) {
     }
     return result;
   }
-  
 
-   
-  
-console.log(getSuitValues(cardData))
+// console.log(getSuitValues(cardData))
+function getSuitValuesrec(cardData) {
+  return cardData.reduce((acc,{suit, value})=>{
+if(!acc[suit]){
+  acc[suit] = [value];
+ 
+
+}else{
+  acc[suit].push(value)
+
+}
+  },{})
+}
+
 /** 
  *  4. write a function which returns an object with the suits as its key and its available values as value
  *  ans => { heart:[7], club:[8,2,10], diamond:[2,5]} 

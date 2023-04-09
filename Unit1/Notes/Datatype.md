@@ -11,7 +11,6 @@ Copy code
 for variable in iterable:
     # do something
 The while loop has a flexible syntax and is used when the number of iterations is not known in advance:
-
 arduino
 Copy code
 while condition:

@@ -1,5 +1,5 @@
 <!-- ---------------------------------Closures---------------------------------------------------------------->
-Closures=> In JavaScript, a "closer" is short for "closure." A closure is a function that has access to variables defined outside of its own scope, including variables defined in its parent function's scope.
+Closures=> In JavaScrip- A closure is a function that has access to variables defined outside of its own scope, including variables defined in its parent function's scope.
 
 This means that a closure can "remember" the values of these variables even after its parent function has finished executing. This behavior is possible because a closure retains a reference to its parent function's lexical environment.
 

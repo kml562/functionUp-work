@@ -48,7 +48,7 @@ function getSuits(cardData) {
 
 return ans
 }
-
+// ans.filter(el=> {return el%2===0})
 // console.log(getSuits(cardData)); 
 
 function countSuits(cardData) {

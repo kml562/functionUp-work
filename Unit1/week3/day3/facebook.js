@@ -62,9 +62,9 @@ const facebookProfiles = [
 // 2. USE HIGHER ORDER FUNCTIONS TO SOLVE THE ABOVE QUESTIONS(map, filter, find, forEach etc. )
 
 // ==================================== 0 ==================================== //
-
+// . property as a
 function profileLookup(name, property) {
-  //write your code here
+  //write your code here {}
   let data = facebookProfiles.find((el) => el.firstName === name);
   if (data) {
     return data[property] ? data[property] : "no such property";
@@ -84,7 +84,7 @@ function profileLookupLoop(name, property) {
   }
   return "person not found";
 }
-//  console.log(profileLookupLoop("Pritesj", "numbehr"))
+//  console.log(profileLookupLoop("Prites", "numbehr"))
 // complete the above function such that when it is called with name and property, then it should return its value
 // ex
 // profileLookup("Pritesh", "number"), then it should return his number
@@ -161,7 +161,6 @@ const findFullNameLoop = (stateName) => {
 //  console.log(findFullNameLoop("rajasthan"))
 // 2. complete this function, which takes state name as argument and return the name
 // of one of its residents
-
 // ================================== 3 ====================================== //
 
 function getDLStatus(facebookProfiles) {
@@ -234,7 +233,7 @@ const getFullNameLoop = (facebookProfiles) =>{
 //ans = ['Akash Agarwal', 'Pritesh Kumar', 'Sabiha Khan', 'Suyash Kashyap', 'Jay' ]
 
 // ===================================== 5 =================================== //
-
+// O(n*m)
 function getLikes(facebookProfiles) {
     const likesSet = new Set();
     
