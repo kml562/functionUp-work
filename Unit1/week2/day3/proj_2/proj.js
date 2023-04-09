@@ -18,9 +18,11 @@ const morePlaces = ['kochi', 'hyderabad', 'Shimla', 'Srinagar']
 // take out last three element from the morePlacesArray and take out first three elements from the places array 
 // and print the combined array
 //result =  ['hyderabad', 'Shimla', 'Srinagar', 'delhi', 'gurgaon', 'jaipur',]
-let combinedaray= morePlaces.slice(morePlaces.length-3);
 
-combinedaray= [...combinedaray,...places.slice(0,3)]
+
+// let combinedaray= morePlaces.slice(morePlaces.length-3);
+
+combinedaray= [...morePlaces.slice(morePlaces.length-3),...places.slice(0,3)]
 
 console.log("combinedarray",combinedaray)
 
