@@ -86,4 +86,11 @@ function getDL(state) {
     return acc
   }, []);
 }
-console.log(getDL("gurgaon"))
+// console.log(getDL("gurgaon"))
+
+function getdrv(facebookProfiles){
+let res= facebookProfiles.find((el)=> !el.hasDrivingLicense&&el.likes.includes("driving"))
+return res? res.firstName:"no data"
+}
+
+console.log(getdrv(facebookProfiles))
