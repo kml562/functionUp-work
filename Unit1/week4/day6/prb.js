@@ -53,3 +53,7 @@ if(!obj[suit]){
 }
   })
   console.log(obj)
+
+  for(let el of cardData){
+    return el
+  }
