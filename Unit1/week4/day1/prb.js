@@ -97,3 +97,16 @@ const facebookProfiles = [
 // }
 // }
 // console.log(profileLookup("Pritesh", "number"))
+
+function getSuitValuesww(cardData) {
+    const result=cardData.reduce((acc,curr)=>{
+      if(!acc[curr[suit]]){
+        acc[curr[suit]]=[curr[value]]
+      }else{
+        acc[curr[suit]].push(curr[value]);
+      }
+      return acc
+    },{})
+      return result
+    }
+    console.log(getSuitValuesww(cardData))
