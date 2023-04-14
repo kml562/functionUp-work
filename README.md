@@ -1,2 +1,3 @@
-# studious-disco
-local scope and global scope 
+## function Up work
+
+all the assigment 
