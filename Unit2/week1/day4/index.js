@@ -7,3 +7,5 @@ console.log(...num+"")
 // ans+= str[i]+" ";
 // }
 // console.log(ans);
+
+let strring= console.log("abs")
