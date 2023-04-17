@@ -33,7 +33,7 @@ if(location ==="gurgaon"){
     acc.push(lastName?firstName+" "+lastName:firstName)
 }
 return acc;
-},[])
+},[1,3,4])
 
 //  console.log(fullNames)
 // ======================================================================== //
