@@ -1,7 +1,7 @@
 const express = require('express');
 const { route } = require('express/lib/application');
 const router = express.Router();
-const myUnderscore = require('underscore')
+
 const {array,objarr}=require("../data/data.js")
 const {list,find}=require('../module/list.js');
 const {findel}= require('../module/filter.js');
@@ -24,18 +24,13 @@ res.send(find(array(),req.params.id))
 
 router.get('/films', function(req, res) {
 res.send(objarr())
+console.log("hello world")
 })
 
 /*
 Write api GET /films/:filmId where filmId is the value received in request path params. Use this value to 
 return a movie object with this id. In case there is no such movie present in the array, return a suitable
  message in the response body. Example for a request GET /films/3 should return the movie object 
-{
- “id”: 3,
- “name”: “Rang de Basanti”
-}
-Similarly for a request GET /films/9 the response can be something like - ‘No movie exists with this id’
-
 /*/
 
 router.get('/films/:filmID', function (req, res) {

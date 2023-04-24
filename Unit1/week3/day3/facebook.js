@@ -240,7 +240,7 @@ function getLikes(facebookProfiles) {
     facebookProfiles.forEach(el => {
       if (el.likes) {
         el.likes.forEach(like => {
-          likesSet.add(like);
+         ;
         });
       }
     });
