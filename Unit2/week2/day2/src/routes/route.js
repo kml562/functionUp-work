@@ -56,3 +56,16 @@ missingNumber= sum-accsum;
 
 ///////////////////////////
 
+app.get("/so11b", function (req, res) {
+	let arr = [33, 34, 35, 37, 38];
+	// all the value increse 1 by 1 so the next value wiil be arr[i]+1;
+	let missingNumber;
+	for (let i = 0; i < arr.length - 1; i++) {
+	  if (arr[i] + 1 != arr[i + 1]) {
+		missingNumber = arr[i] + 1;
+		break;
+	  }
+	 
+	}
+	res.send({ data: missingNumber });
+  });
