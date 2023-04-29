@@ -6,6 +6,65 @@ router.get("/test-me", function (req, res) {
   res.send("My first ever api!");
 });
 
+//
+
+
+let players =
+   [
+       {
+           "name": "manish",
+           "dob": "1/1/1995",
+           "gender": "male",
+           "city": "jalandhar",
+           "sports": [
+               "swimming"
+           ]
+       },
+       {
+           "name": "gopal",
+           "dob": "1/09/1995",
+           "gender": "male",
+           "city": "delhi",
+           "sports": [
+               "soccer"
+           ]
+       },
+       {
+           "name": "lokesh",
+           "dob": "1/1/1990",
+           "gender": "male",
+           "city": "mumbai",
+           "sports": [
+               "soccer"
+           ]
+       },
+   ]
+
+
+
+   router.post('/players', function (req, res) {
+ //LOGIC WILL COME HERE
+ let newplayer={
+  "name": "mohit",
+  "dob": "1/1/1990",
+  "gender": "male",
+  "city": "mumbai",
+  "sports": [
+      "soccer"
+  ]
+}
+
+let val= players.find((el)=>el.name==newplayer.name)
+if(!val){
+  players.push(newplayer)
+  res.send(  { data: players , status: true }  )
+}else{
+  res.send({ status:"name that already exists in the data"})
+}
+    
+})
+
+module.exports = router;
 
 //create the following API’s (write logic in bookController and routes in routes):
 
@@ -34,4 +93,4 @@ router.get("/getXINRBooks",BookController.getXINRBook)
  router.get("/getRandomBooks",BookController.getRandomBook )
 
 
-module.exports = router;
+//module.exports = router;
