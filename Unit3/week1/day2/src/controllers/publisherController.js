@@ -9,23 +9,32 @@ const createPublisher = async (req, res) => {
 
 // For the books written by authors having a rating greater than 3.5, update the books price by 10
 //(For eg if old price for such a book is 50, new will be 60)
+// const putdata = async (req, res) => {
+//   try {
+// let updateboolen= await bookmode.updateMany(
+//   {"publisher.name":{$in:["Penguin","HarperCollins"]}},
+//   { isHardCover:true},
+//   {new:true}
+  
+//   )
+
+//   res.json({updatadata: updateboolen})
+//   } catch (err) {
+//     res.json({ error: err });
+//   }
+// };
 const putdata = async (req, res) => {
   try {
-    let name = req.params;
-    let schema = req.body;
-    let update = await PublisherModel.findOneAndUpdate(name, schema, {
-      new: true,
-    });
-
-    let updatePrice = await bookmode.updateMany(
-      { rating: { $gt: 3.5 } },
-      { $inc: { price: 10 } },
-      { new: true }
+    let updateResult = await bookmode.updateMany(
+      {"publisher.name": {$in: ["Penguin", "HarperCollins"]}},
+      {isHardCover: true},
+      {new: true}
     );
-    res.send({ data: update, updatePrice: updatePrice });
+    //console.log(updateResult) 
+        res.json({updateResult});
   } catch (err) {
     res.json({ error: err });
   }
 };
 
-module.exports = { createPublisher, putdata };
+module.exports = { createPublisher,putdata };

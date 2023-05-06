@@ -4,10 +4,7 @@ const mongoose = require('mongoose');
 const publicScema= new mongoose.Schema( {
  name:String,
  headQuarter:String,
- isHardCover:{
-    type:Boolean,
-    default:false
- }
+ 
 }, { timestamps: true });
 
 

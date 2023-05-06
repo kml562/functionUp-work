@@ -22,6 +22,10 @@ default:4.3
       required:true,
       isValid: true
     },
+    isHardCover:{
+      type:Boolean,
+      default:false
+   }
   },
   { timestamps: true }
 );

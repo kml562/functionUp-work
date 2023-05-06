@@ -27,7 +27,7 @@ router.get("/getBooksWithAuthorDetails", bookController.getBooksWithAuthorDetail
 //old price for such a book is 50, new will be 60)
 
 
-router.put("/books/:name", publishController.putdata )
+ router.put("/books", publishController.putdata )
 
 
 module.exports = router;

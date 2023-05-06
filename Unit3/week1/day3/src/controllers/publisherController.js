@@ -19,7 +19,7 @@ const putdata = async (req, res) => {
         .populate("author_id", "rating") // Populate author document and include only rating field
         .where("author_id.rating") // Filter books where author's rating is greater than 3.5
         .updateMany(
-          { rating: { $gt: 3.5 } },
+          { "author_id.rating": { $gt: 3.5 } },
           { $inc: { price: 10 } },
           {new:true}); // Increment price by 10 for all matching books
       
