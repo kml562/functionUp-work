@@ -1,0 +1,1 @@
+Assignment : exception-handling-and-status-codes  (available on Panel)  - implement try catch and status codes in the previous assignment on JWT
