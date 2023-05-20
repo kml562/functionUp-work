@@ -1,7 +1,9 @@
 Middleware - Which happens in between of req and res, for example - Authorization.
-Next() - A middleware is basically a function which have req, res and next - after the middleware completes we call next to call next middleware or to generate response.
+Next() - A middleware is basically a function which have req, res and next - after the middleware completes we call
+ next to call next middleware or to generate response.
 
-req - Middleware1(Check if user loggedin or not)----Next----Middleware(Wether user is admin or manager)--Next----> Dashboard.
+req - Middleware1(Check if user loggedin or not)----Next----Middleware(Wether user is admin or manager)--Next---->
+ Dashboard.
 
 Ex ->
 
@@ -13,7 +15,8 @@ app.get('/loc', (req,res,next)=>{
 
 It intercepts with incoming req, do something with it, and pass it to next piece of app
 
-Ex -> we have a middleware which check authentication that user is authN to use this particular route in application or not
+Ex -> we have a middleware which check authentication that user is authN to use this particular route in 
+application or not
 
 
 
@@ -35,3 +38,16 @@ app.get('/api/protected', isAuthenticated, (req, res) => {
 * this code will only be executed if the user is authenticated
   res.json({ message: 'You are authorized to access this resource' });
 });
+
+
+
+Middleware functions usually have 3 standard params req, res, and next. The first two are objects, the last is a function that will call
+ the next middleware function, if there is one.
+Usually there is a middleware chain, meaning a chain of functions that are called one after the other, with the last function sending
+ the response back to the browser. So we get the request from the browser, make any modifications and data additions, and then send a
+  response back.
+You must call next() (unless it’s the last function in the chain) or the request will just hang and eventually timeout. In the browser 
+this will manifest as a really long spinner before a message of “connection timed out” or similar.
+Any changes you make to req or res will be available in the next middleware function.
+req and res are unique for each request. Meaning that a user from USA result in a different req object than a user from a 
+European country.

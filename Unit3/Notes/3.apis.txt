@@ -4,7 +4,8 @@ So it is a set of rules and protocol that how different system will intrect with
 
 It allow an developer to use other services in order to get data from external server.
 
-Ex-> Weather API or best is Google Map API, now we are building an food delivering app and we want to use map, so building our own data will takes time so we can use google API to get that information from tham and use it. 
+Ex-> Weather API or best is Google Map API, now we are building an food delivering app and we want to use map,
+ so building our own data will takes time so we can use google API to get that information from tham and use it. 
 
 we can also build our own api.
 

@@ -1,4 +1,5 @@
 //const { count } = require("console")
+const bookModel = require("../models/bookModel")
 const BookModel= require("../models/bookModel")
 
 const createBook= async function (req, res) {
@@ -43,6 +44,8 @@ const deleteBooks= async function (req, res) {
      )
      
      res.send( { msg: allBooks})
+
+    //  let deleteBooks = await bookModel.deleteMany()
 }
 
 

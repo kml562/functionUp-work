@@ -1,0 +1,7 @@
+A callback function is a function that is passed as an argument to another function and is executed when the parent 
+function is called. In other words, a callback function is a function that is called back by another function.
+
+Callback functions are commonly used in asynchronous programming, where a task may take some time to complete, 
+and the program needs to continue executing other code while waiting for the task to finish. In this scenario,
+ the callback function is called when the task is complete, allowing the program to continue with the next set of
+  instructions.
